@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { act } from 'react';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByRole(/learn react/i);
+  const linkElement = screen.getByText(/learn react/i); // Use getByText para encontrar o texto
   expect(linkElement).toBeInTheDocument();
 });
+
