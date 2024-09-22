@@ -4,15 +4,15 @@ import App from './App';
 test('renders NavBar, ToDo, and Footer components', () => {
   render(<App />);
 
-  // Verifica se algo específico do NavBar é renderizado
-  const navBarElement = screen.getByText(/navbar/i); // Altere o texto de acordo com o que é renderizado no NavBar
+  // Verifica se o título "Task to do" do NavBar é renderizado
+  const navBarElement = screen.getByText(/task to do/i);
   expect(navBarElement).toBeInTheDocument();
 
-  // Verifica se algo específico do ToDo é renderizado
-  const todoElement = screen.getByText(/todo/i); // Altere o texto de acordo com o que é renderizado no ToDo
+  // Verifica se o texto "Add New Task" do ToDo é renderizado
+  const todoElement = screen.getByText(/add new task/i);
   expect(todoElement).toBeInTheDocument();
 
-  // Verifica se algo específico do Footer é renderizado
-  const footerElement = screen.getByText(/footer/i); // Altere o texto de acordo com o que é renderizado no Footer
+  // Verifica se o rodapé com "Developed by Vinícius Dias" é renderizado
+  const footerElement = screen.getByText(/developed by vinícius dias/i);
   expect(footerElement).toBeInTheDocument();
 });
