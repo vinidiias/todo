@@ -22,7 +22,7 @@ function ToDo() {
     }
 
     useEffect(() => {
-      fetch('https://api.npoint.io/dd79f96035d5fa24e6a3/tasks', {
+      fetch('https://jsonserv.vercel.app/tasks', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function ToDo() {
     }, [tasks])
 
     function createTask(task) {
-        fetch('https://api.npoint.io/dd79f96035d5fa24e6a3/tasks', {
+        fetch('https://jsonserv.vercel.app/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function ToDo() {
     }
 
     function removeTask(id) {
-      fetch(`https://api.npoint.io/dd79f96035d5fa24e6a3/tasks/${id}`, {
+      fetch(`https://jsonserv.vercel.app/tasks/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

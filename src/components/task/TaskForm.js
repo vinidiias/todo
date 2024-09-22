@@ -10,7 +10,7 @@ function TaskForm( { handleSubmit, btnText, taskData, toggleOnChange }) {
     const [task, setTask] = useState(taskData || [])
 
     useEffect(() => {
-        fetch('https://api.npoint.io/dd79f96035d5fa24e6a3/importances', {
+        fetch('https://jsonserv.vercel.app/importances', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
