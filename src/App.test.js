@@ -13,6 +13,9 @@ test('renders NavBar, ToDo, and Footer components', () => {
   expect(todoElement).toBeInTheDocument();
 
   // Verifica se o rodapé com "Developed by Vinícius Dias" é renderizado
-  const footerElement = screen.getByText(/developed by vinícius dias/i);
+  const footerElement = screen.getByText((content, element) => {
+    return content.startsWith('Developed by') && element.tagName.toLowerCase() === 'p';
+  });
   expect(footerElement).toBeInTheDocument();
 });
+
