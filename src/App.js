@@ -6,9 +6,7 @@ import ToDo from './pages/ToDo'
 function App() {
   return (
     <div className="app">
-      <NavBar />
-      <ToDo />
-      <Footer />
+      <p>oi</p>
     </div>
   );
 }
