@@ -19,7 +19,6 @@ function TaskForm( { handleSubmit, btnText, taskData, toggleOnChange }) {
         .then((resp) => resp.json())
         .then(data => {
             setImportances(data)
-            console.log(data)
         })
         .catch(err => console.log(err))
     }, [])
