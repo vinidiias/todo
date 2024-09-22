@@ -10,7 +10,7 @@ function TaskForm( { handleSubmit, btnText, taskData, toggleOnChange }) {
     const [task, setTask] = useState(taskData || [])
 
     useEffect(() => {
-        fetch('https://jsonserv-lw7et6wlx-vinidiias-projects.vercel.app/importances', {
+        fetch('https://jsonserv.vercel.app/importances', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

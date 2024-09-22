@@ -22,7 +22,7 @@ function ToDo() {
     }
 
     useEffect(() => {
-      fetch('https://jsonserv-lw7et6wlx-vinidiias-projects.vercel.app/tasks', {
+      fetch('https://jsonserv.vercel.app/tasks', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function ToDo() {
     }, [tasks])
 
     function createTask(task) {
-        fetch('https://jsonserv-lw7et6wlx-vinidiias-projects.vercel.app/tasks', {
+        fetch('https://jsonserv.vercel.app/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function ToDo() {
     }
 
     function removeTask(id) {
-      fetch(`https://jsonserv-lw7et6wlx-vinidiias-projects.vercel.app/tasks/${id}`, {
+      fetch(`https://jsonserv.vercel.app/tasks/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
